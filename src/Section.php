@@ -18,7 +18,7 @@ abstract class Section
         return array_first($this->annotations, function ($key, $annotation) use ($type) {
             $type = sprintf('Dingo\\Blueprint\\Annotation\\%s', $type);
 
-            return $annotation instanceof $type;
+            return $key instanceof $type;
         });
     }
 
